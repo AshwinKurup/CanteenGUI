@@ -87,12 +87,12 @@ def timeOfDayDecider(opening, closing): # takes the current system time and deci
 
 
 class NTUsystem(tk.Tk):
-  def __init__(self):
+  def __init__(self): # done by shu hui, Ashwin, Benedict
       tk.Tk.__init__(self) # init function of tk.Tk. is being called, therefore constructing everything in it
       self._frame = None
       self.switch_frame(HomePage)
 
-  def switch_frame(self, frame_class):
+  def switch_frame(self, frame_class):# done by shu hui, Ashwin, Benedict
       new_frame = frame_class(self)
       if self._frame is not None:
           self._frame.destroy()
@@ -100,7 +100,7 @@ class NTUsystem(tk.Tk):
       self._frame.pack()
 
 class HomePage(tk.Frame):
-  def __init__(self, master):
+  def __init__(self, master):# done by shu hui, Ashwin, Benedict
       tk.Frame.__init__(self, master)
       tk.Label(self, text="Real Time NTU Canteen System", font=('Arial', 20, "bold")).pack(side="top", fill="x", pady=5)
       tk.Label(self, text="Current time: "+day+' '+str_time1[0:2]+':'+str_time1[2:4], font=('Arial', 10)).pack()
@@ -111,7 +111,7 @@ class HomePage(tk.Frame):
       tk.Button(self, text="Exit", width = 40, command=self.master.destroy).pack()
 
 class ViewS(tk.Frame):
-  def __init__(self, master):
+  def __init__(self, master):# done by shu hui, Ashwin, Benedict
       tk.Frame.__init__(self, master)
       tk.Frame.configure(self)
       tk.Label(self, text="View Stalls", font=('Arial', 18, "bold")).pack(side="top", fill="x", pady=5)
@@ -125,7 +125,7 @@ class ViewS(tk.Frame):
                 command=lambda: master.switch_frame(HomePage)).pack()
 
 class miniwok(tk.Frame):
-  def __init__(self, master):
+  def __init__(self, master):# done by shu hui, Ashwin, Benedict
       tk.Frame.__init__(self, master)
       tk.Frame.configure(self)
 
@@ -162,7 +162,7 @@ class miniwok(tk.Frame):
                 command=lambda: master.switch_frame(ViewS)).pack(side=tk.BOTTOM)
 
 class chicken(tk.Frame):
-  def __init__(self, master):
+  def __init__(self, master):# done by shu hui, Ashwin, Benedict
 
       tk.Frame.__init__(self, master)
       tk.Frame.configure(self)
@@ -193,7 +193,7 @@ class chicken(tk.Frame):
 
 
 class mac(tk.Frame):
-  def __init__(self, master):
+  def __init__(self, master):# done by shu hui, Ashwin, Benedict
 
       tk.Frame.__init__(self, master)
       tk.Frame.configure(self)
@@ -241,7 +241,7 @@ class mac(tk.Frame):
 
 
 class WaitTMiniwok(tk.Frame): # Frame that displays waitings times for a specific length of queue
-  def __init__(self, master):
+  def __init__(self, master):# done by shu hui, Ashwin, Benedict
       tk.Frame.__init__(self, master)
       tk.Frame.configure(self)
       tk.Label(self, text="Calculate Waiting Time", font=('Arial', 18, "bold")).pack(side="top", fill="x", pady=5)
@@ -259,7 +259,7 @@ class WaitTMiniwok(tk.Frame): # Frame that displays waitings times for a specifi
                 command=lambda: master.switch_frame(miniwok)).pack(side=tk.BOTTOM)
 
 class WaitTChicken(tk.Frame): # Frame that displays waitings times for a specific length of queue
-  def __init__(self, master):
+  def __init__(self, master):# done by shu hui, Ashwin, Benedict
       tk.Frame.__init__(self, master)
       tk.Frame.configure(self)
       tk.Label(self, text="Calculate Waiting Time", font=('Arial', 18, "bold")).pack(side="top", fill="x", pady=5)
@@ -276,7 +276,7 @@ class WaitTChicken(tk.Frame): # Frame that displays waitings times for a specifi
                 command=lambda: master.switch_frame(chicken)).pack()
 
 class WaitTMacs(tk.Frame): # Frame that displays waitings times for a specific length of queue
-  def __init__(self, master):
+  def __init__(self, master):# done by shu hui, Ashwin, Benedict
       tk.Frame.__init__(self, master)
       tk.Frame.configure(self)
       tk.Label(self, text="Calculate Waiting Time", font=('Arial', 18, "bold")).pack(side="top", fill="x", pady=5)
@@ -296,7 +296,7 @@ class WaitTMacs(tk.Frame): # Frame that displays waitings times for a specific l
 
 class Oper1(tk.Frame):
 
-  def __init__(self, master):
+  def __init__(self, master):# done by shu hui, Ashwin, Benedict
       tk.Frame.__init__(self, master)
       tk.Frame.configure(self)
       tk.Label(self, text="View the operating hours", font=('Arial', 18, "bold")).pack(side="top")
@@ -309,7 +309,7 @@ class Oper1(tk.Frame):
 #operating hours for mini wok
 
 class Oper2(tk.Frame):
-  def __init__(self, master):
+  def __init__(self, master):# done by shu hui, Ashwin, Benedict
       tk.Frame.__init__(self, master)
       tk.Frame.configure(self)
       tk.Label(self, text="View the operating hours", font=('Arial', 18, "bold")).pack(side="top")
@@ -322,7 +322,7 @@ class Oper2(tk.Frame):
 #operating hours for chicken rice
 
 class Oper3(tk.Frame):
-  def __init__(self, master):
+  def __init__(self, master):# done by shu hui, Ashwin, Benedict
     tk.Frame.__init__(self, master)
     tk.Frame.configure(self)
     tk.Label(self, text="View the operating hours", font=('Arial', 18, "bold")).pack(side="top")
@@ -337,7 +337,7 @@ class Oper3(tk.Frame):
 
 #Function window for user to enter day and time
 class dateT(tk.Frame):
- def __init__(self, master):
+ def __init__(self, master):# done by shu hui, Ashwin, Benedict
     tk.Frame.__init__(self, master)
     tk.Frame.configure(self)
     tk.Label(self, text="Set user-defined day and time", font=('Arial', 18, "bold")).pack(side="top", fill="x", pady=5)
