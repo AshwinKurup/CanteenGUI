@@ -19,14 +19,14 @@ MINI_OCD = {'miniwok_open': 0, 'miniwok_close': 0}
 CHIK_OCD = {'chicken_open': 0, 'chicken_close': 0}
 
 MACS_OCD = {'macs_open': 0, 'macs_close': 0}
-
 # the above are the open and close timings to be given values in their respective Stall Classes
 
-def popupmessage(timestr,dayIn):#try and except function for user defined date and time
+def popupmessage(timestr,dayIn): #try and except function for user defined date and time
  global str_time1
  global time1
  global day
  #global time1 and day so that they can be used at all namespace
+
  for i in timestr:
      if i.isalpha() == True:
          messagebox.showerror(title="Error", message="There should not have an alphabet")
@@ -36,11 +36,10 @@ def popupmessage(timestr,dayIn):#try and except function for user defined date a
      elif int(timestr) > 2359 or int(timestr) <= 0 or int(timestr[2]) >= 6:  # last conditional exists to make sure timings like 1367 cannot be accepted
       messagebox.showerror(title="Error", message="Time should be between 0000 and 2359 in proper 24 Hour format.")
 
- str_time1 = timestr # str_time1 is the global variable used for all other functions. timestr is the local variable which is the value of the current 24 Hour time
+ str_time1 = timestr #str_time1 is the global variable used for all other functions. timestr is the local variable which is the value of the current 24 Hour time
  time1 = int(timestr)
 
- day = dayIn
-    #assign user's input to the system variables
+ day = dayIn # assign user's input to the system variables
 
 def stallIsClosedlabel(opening, closing, display_text): # adds text into a label saying that the stall is closed during the closing hours
   if opening< time1 <closing:
